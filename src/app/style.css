@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto px-4;
+}
+
+.header {
+  @apply py-5;
+}
+
+.sticky {
+  @apply fixed z-[9999] bg-white dark:bg-dark py-2 transition backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar > li > a {
+  @apply lg:py-7;
+}
+.sticky .navbar > li > a {
+  @apply lg:py-5;
+}
+
+.menu-scroll.active {
+  @apply text-primary;
+}
+
+.active.menu-scroll {
+  @apply text-primary;
+}
+
+.submenu-item a.active {
+  @apply text-primary dark:text-white;
+}
+.submenu-item a.active span svg {
+  @apply rotate-180;
+}
+
+.portfolio-btn-wrapper button.active {
+  @apply underline;
+}
+
+.menu-wrapper {
+  @apply hidden;
+}
+.menu-wrapper.show {
+  @apply flex;
+}
+
+.show.menu-wrapper {
+  @apply flex;
+}
+
+.title {
+  background: linear-gradient(
+    180deg,
+    rgba(74, 108, 247, 0.4) 0%,
+    rgba(74, 108, 247, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  opacity: 0.2;
+  @apply absolute top-0 left-1/2 -translate-x-1/2 text-[40px] leading-none font-extrabold sm:text-[60px] lg:text-[95px];
+}
+
+.grid-sizer {
+  @apply w-full md:w-1/2 lg:w-1/3;
+}
+
+.tns-controls {
+  @apply absolute bottom-14 left-1/2 z-30 flex -translate-x-1/2 space-x-5 lg:left-[70px] lg:translate-x-0;
+}
+.tns-controls button {
+  @apply bg-primary/10 hover:bg-primary text-primary dark:hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full hover:text-white hover:opacity-100 dark:bg-white/10 dark:text-white dark:hover:text-white dark:hover:opacity-100;
+}
+
+.bg-noise-pattern {
+  background-image: url('/images/NoisePattern.svg');
+}
+
+#supportCheckbox:checked ~ div span {
+  @apply opacity-100;
+}
+
+/* Additional styles for Navbar */
+.bg-transparent {
+  background-color: transparent;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+.border-gray-700 {
+  border-color: #374151;
+}
